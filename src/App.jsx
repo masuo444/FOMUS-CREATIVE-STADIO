@@ -311,13 +311,13 @@ const HomePage = ({ setPage }) => (
           </h1>
         </div>
 
-        <div className="space-y-6 text-sm md:text-lg leading-relaxed text-gray-200 font-light tracking-wide mb-16 max-w-2xl animate-fade-in-up opacity-0" style={{ animationDelay: '0.6s' }}>
+        <div className="space-y-6 text-sm md:text-lg leading-relaxed text-white font-light tracking-wide mb-16 max-w-2xl animate-fade-in-up opacity-0" style={{ animationDelay: '0.6s' }}>
           <p>
             FOMUS Creative Studio は、<br className="hidden md:block" />
             ストーリー、デザイン、映像、そして世界観を統合し、<br className="hidden md:block" />
             “深く届くブランド”を届けるクリエイティブスタジオです。
           </p>
-          <p className="text-gray-400 text-sm">
+          <p className="text-white/80 text-sm">
             日本・アイルランド・ドバイなど世界を歩き、<br className="hidden md:block" />
             工芸・アート・物語制作を横断してきたFOMUSだからこそ、<br className="hidden md:block" />
             静かで力強いクリエイティブを提供できます。
