@@ -1,10 +1,61 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>fomus----</title>
+    <title>FOMUS Creative Studio</title>
+    <meta
+      name="description"
+      content="FOMUS Creative Studioは、物語・デザイン・映像・世界観を統合し“深く届くブランド”を届けるクリエイティブスタジオです。Story-to-Comic / Visual Branding / KUKU Co-Creation / Point Programでブランドを強く、美しく、速く届けます。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="FOMUS Creative Studio | 物語から、ブランドを届ける。" />
+    <meta
+      property="og:description"
+      content="物語・デザイン・映像・世界観を統合し、“深く届くブランド”を届ける。Story-to-Comic / Visual Branding / KUKU Co-Creation / Point Programを展開するFOMUSの公式サイト。"
+    />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="FOMUS Creative Studio | 物語から、ブランドを届ける。" />
+    <meta
+      property="twitter:description"
+      content="物語・デザイン・映像・世界観を統合し、“深く届くブランド”を届ける。Story-to-Comic / Visual Branding / KUKU Co-Creation / Point Programを展開するFOMUSの公式サイト。"
+    />
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop" />
+    <script>
+      (function () {
+        const url = window.location.origin || window.location.href;
+        let canonical = document.querySelector('link[rel="canonical"]');
+        if (!canonical) {
+          canonical = document.createElement('link');
+          canonical.setAttribute('rel', 'canonical');
+          document.head.appendChild(canonical);
+        }
+        canonical.setAttribute('href', url);
+        const jsonLd = {
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'Organization',
+              name: 'FOMUS Creative Studio',
+              url,
+              email: 'fomus.official@gmail.com',
+              sameAs: [],
+            },
+            {
+              '@type': 'WebSite',
+              name: 'FOMUS Creative Studio',
+              url,
+            },
+          ],
+        };
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(jsonLd);
+        document.head.appendChild(script);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
