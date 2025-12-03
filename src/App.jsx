@@ -112,7 +112,7 @@ const useOnScreen = (options) => {
   return [ref, visible];
 };
 
-const ScrollReveal = ({ children, delay = 0, className = '' }) => {
+const ScrollReveal = ({ children, delay = 0, className = '', ...props }) => {
   const [ref, visible] = useOnScreen({ threshold: 0.1 });
 
   return (
@@ -120,6 +120,7 @@ const ScrollReveal = ({ children, delay = 0, className = '' }) => {
       ref={ref}
       className={`transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} ${className}`}
       style={{ transitionDelay: `${delay}ms`, transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}
+      {...props}
     >
       {children}
     </div>
@@ -586,7 +587,10 @@ const HomePage = ({ setPage }) => (
     <section className="py-28 bg-fomus-light border-t border-gray-100">
       <div className="container mx-auto px-6">
         <SectionHeading en="FOMUS Point Program" jp="ポイントプログラム" align="left" />
-        <ScrollReveal className="bg-white p-12 flex flex-col md:flex-row md:items-center gap-10 border border-gray-100 hover:border-fomus-gold transition-colors duration-300 shadow-sm">
+        <ScrollReveal
+          onClick={() => setPage('point')}
+          className="bg-white p-12 flex flex-col md:flex-row md:items-center gap-10 border border-gray-100 hover:border-fomus-gold transition-colors duration-300 shadow-sm cursor-pointer"
+        >
           <div className="flex-1">
             <h3 className="font-serif-en text-3xl mb-4">Earn Points per Project</h3>
             <p className="text-sm text-gray-600 mb-4">
