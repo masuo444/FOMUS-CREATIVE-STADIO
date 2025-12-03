@@ -1146,7 +1146,12 @@ const ContactPage = ({ setPage }) => (
         </p>
       </div>
 
-      <form className="space-y-12 bg-white relative z-10">
+      <form
+        className="space-y-12 bg-white relative z-10"
+        action="mailto:fomus.official@gmail.com"
+        method="POST"
+        encType="text/plain"
+      >
         <div className="group">
           <label className="block text-xs font-bold tracking-widest uppercase mb-2 text-gray-400 group-focus-within:text-fomus-gold transition-colors">Name / Company</label>
           <input
@@ -1172,7 +1177,7 @@ const ContactPage = ({ setPage }) => (
           ></textarea>
         </div>
         <div className="text-center pt-8">
-          <Button className="w-full md:w-auto min-w-[200px]">Send Message</Button>
+          <Button className="w-full md:w-auto min-w-[200px]" type="submit">Send Message</Button>
         </div>
       </form>
     </div>
